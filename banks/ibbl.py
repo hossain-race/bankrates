@@ -2,7 +2,7 @@
 # github: https://github.com/mahmudahsan
 # blog: http://thinkdiff.net
 # web: http://pythonbangla.com
-# License: MIT License
+# license: MIT License
 # IBBL
 
 from urllib.request import urlopen 
