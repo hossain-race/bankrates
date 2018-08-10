@@ -12,7 +12,7 @@ pipenv shell
 ## How to use
 If user types in terminal/powershell. Valid commands
 ```
-python3 rates.py ibbl usd:100(optional) browser(optional)
+python3 rates.py ibbl usd=100(optional) browser(optional)
 ```
 
 ### Example 1:
