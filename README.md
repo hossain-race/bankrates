@@ -20,6 +20,15 @@ python3 rates.py ibbl usd:100(optional) browser(optional)
 # create a html output file and shows in browser
 ```
 
+## Python Knowledge 
+To understand the code minimum python knowledge required:
+
+- Fundamental of Python 3 
+- Object oriented programming
+- Exception Handling
+- Files I/O
+- pipenv packaging
+
 ## Contribution
 If you want to contribute on this project, you're welcome to fork the project and submit a pull request. 
 

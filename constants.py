@@ -3,6 +3,7 @@
 
 COMMANDS = (
     'browser',
+    'verbose', # shows print output
 )
 
 BANK_NAMES = (

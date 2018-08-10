@@ -9,14 +9,22 @@
 from urllib.request import urlopen 
 from bs4 import BeautifulSoup
 
-from constants import *
-
 class IBBL:
-    def __init__(self):
-        pass 
+    def __init__(self, url, verbose=False):
+        self._url = url
+        self._verbose = verbose
+        self._data = ''
+
 
     def retrieve_webpage(self):
-        pass 
+        try:
+            html = urlopen(self._url)
+        except Exception as e:
+            print (e)
+        else:
+            self._data = html.read()
+            if len(self._data) > 0 and self._verbose:
+                print ("Retrieved successfully") 
 
     def scrap_webpage_data(self):
         pass 
@@ -26,3 +34,6 @@ class IBBL:
 
     def create_html_file(self):
         pass
+
+    def debug(self):
+        print(self._data)
