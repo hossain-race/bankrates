@@ -1,8 +1,7 @@
 # author: Mahmud Ahsan
 # github: https://github.com/mahmudahsan
 # blog: http://thinkdiff.net
-# Web: http://pythonbangla.com
-# youtube: https://www.youtube.com/c/banglaprogramming
+# web: http://pythonbangla.com
 # License: MIT License
 # IBBL
 

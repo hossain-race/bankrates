@@ -1,4 +1,8 @@
 # author: Mahmud Ahsan
+# github: https://github.com/mahmudahsan
+# blog: http://thinkdiff.net
+# web: http://pythonbangla.com
+# license: MIT License
 # Constants
 
 COMMANDS = (
