@@ -10,10 +10,16 @@ import unittest
 
 from constants import *
 from ibbl import IBBL
+from helper import verify_https_issue
 
 class IBBLTestCase(unittest.TestCase):
+    def setUp(self):
+        verify_https_issue()
+        self._ibbl = IBBL(url=BANK_URLS['ibbl'])
+        self._ibbl.retrieve_webpage()
+    
     def test_retrieve_webpage(self):
-        self.assertEqual(1, 0) 
+        self.assertTrue(len(self._ibbl._data) > 0)
 
     def test_scrap_webpage_data(self):
         self.assertEqual(1, 0)  
