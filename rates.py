@@ -8,7 +8,7 @@
 # Main Program
 
 from constants import *
-from ibbl import IBBL
+from banks.ibbl import IBBL
 from helper import verify_https_issue
 
 def main():

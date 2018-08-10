@@ -28,6 +28,7 @@ To understand the code minimum python knowledge required:
 - Exception Handling
 - Files I/O
 - pipenv packaging
+- Modules and Package
 
 ## Contribution
 If you want to contribute on this project, you're welcome to fork the project and submit a pull request. 

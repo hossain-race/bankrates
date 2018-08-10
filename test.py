@@ -9,7 +9,7 @@
 import unittest 
 
 from constants import *
-from ibbl import IBBL
+from banks.ibbl import IBBL
 from helper import verify_https_issue
 
 class IBBLTestCase(unittest.TestCase):
