@@ -10,15 +10,22 @@ pipenv shell
 ```
 
 ## How to use
+If user types in terminal/powershell. Valid commands
 ```
 python3 rates.py ibbl usd:100(optional) browser(optional)
-
-# Output: Terminal
-# All data and if usd:100 then equivalent taka
-
-# output: browser
-# create a html output file and shows in browser
 ```
+
+### Example 1:
+- Input ``` python3 rates.py ibbl ```
+- Output ```A beautiful table with currency rates ```
+
+### Example 2:
+- Input ``` python3 rates.py ibbl usd=100```
+- Output ```USD 100 = ?TAKA and a beautiful table with currency rates ```
+
+### Example 3:
+- Input ``` python3 rates.py ibbl usd=100 browser```
+- Output ```create and open html file in a browser with data ```
 
 ## Python Knowledge 
 To understand the code minimum python knowledge required:
