@@ -30,7 +30,6 @@ class Bank:
     def scrap_webpage_data(self):
         pass # override in child class
 
-
     def __str__(self):
         output = ''
         if len(self._rates_data) > 0:
