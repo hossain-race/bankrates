@@ -80,8 +80,26 @@ Update on: 30 Jul, 2018
  ```
 
 ### Example 2:
-- Input ``` python rates.py ibbl usd=100```
-- Output ```USD 100 = ?TAKA and a beautiful table with currency rates ```
+- Input ``` python rates.py ibbl eur=100```
+
+**Output**
+```
+-----------------------------
+Islami Bank Bangladesh Ltd.
+-----------------------------
+EUR 100.0 = BDT 9516.25
+.............................
+USD 1 = BDT 82.75
+GBP 1 = BDT 106.9792
+EUR 1 = BDT 95.1625
+JPY 1 = BDT 0.7345
+CHF 1 = BDT 81.9307
+SGD 1 = BDT 60.1599
+AED 1 = BDT 22.465
+SAR 1 = BDT 22.0285
+CAD 1 = BDT 62.8083
+Update on: 30 Jul, 2018
+```
 
 ### Example 3:
 - Input ``` python rates.py ibbl usd=100 browser```

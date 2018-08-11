@@ -58,8 +58,10 @@ class IBBL(Bank):
     def create_html_file(self):
         pass
 
-def process(command):
+def process(command, **kwargs):
     ibbl = IBBL(url=BANK_URLS[command])
+    curr = kwargs['curr']
+    amount = kwargs['amount']
 
     # getting last scarping time info
     scraping_time = helper.get_last_scraped_time(
@@ -81,4 +83,8 @@ def process(command):
     
     ibbl.convert_data_to_bs4()
     ibbl.scrap_webpage_data()
+    ibbl.convert_amount_to_local_currency(curr, amount)
+
+
+    # Output
     print(ibbl)

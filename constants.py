@@ -7,6 +7,7 @@
 
 # Global Variables
 CACHE = 3 # minutes
+LOCAL_CURRENCY = 'BDT' 
 
 COMMANDS = (
     'browser',
