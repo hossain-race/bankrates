@@ -16,7 +16,7 @@ def verify_https_issue():
         ssl._create_default_https_context = ssl._create_unverified_context
 
 
-def write_webpage_as_html(filename='temp.html', data=''):
+def write_webpage_as_html(filename='html/temp.html', data=''):
     try:
         with open(filename, 'wb') as fobj:
             fobj.write(data)
@@ -27,7 +27,7 @@ def write_webpage_as_html(filename='temp.html', data=''):
         return True
 
 
-def read_webpage_from_html(filename='temp.html'):
+def read_webpage_from_html(filename='html/temp.html'):
     try:
         with open(filename) as fobj:
             data = fobj.read()

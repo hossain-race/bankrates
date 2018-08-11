@@ -54,15 +54,18 @@ python3 rates.py ibbl usd=100(optional) browser(optional)
 **Output**
 It represents 1 Foreign Rate = Bangladeshi Taka Amount
 ```
-USD 82.75
-GBP 106.9792
-EUR 95.1625
-JPY 0.7345
-CHF 81.9307
-SGD 60.1599
-AED 22.465
-SAR 22.0285
-CAD 62.8083
+-----------------------------
+Islami Bank Bangladesh Ltd.
+-----------------------------
+USD 1 = BDT 82.75
+GBP 1 = BDT 106.9792
+EUR 1 = BDT 95.1625
+JPY 1 = BDT 0.7345
+CHF 1 = BDT 81.9307
+SGD 1 = BDT 60.1599
+AED 1 = BDT 22.465
+SAR 1 = BDT 22.0285
+CAD 1 = BDT 62.8083
 Update on: 30 Jul, 2018
  ```
 

@@ -7,6 +7,7 @@
 
 from urllib.request import urlopen 
 from bs4 import BeautifulSoup
+from constants import BANKS
 import re
 
 class IBBL:
@@ -41,7 +42,6 @@ class IBBL:
     def scrap_webpage_data(self):
         currencies_tr = self._soup.find_all(['tr'])
              
-
         for tr in currencies_tr:
             tds = tr.find_all(['td'])
             if len(tds) == 2:
@@ -50,19 +50,28 @@ class IBBL:
 
                 if curr != None:
                     self._rates_data[curr.lower()] = rate
-                    print(curr, rate)
+                    # print(curr, rate)
             elif len(tds) == 1:
                 if tds[0].span != None:
                     self._published_date = tds[0].span.string
                     txtre = re.compile(r'\s+')
                     self._published_date = txtre.sub(' ', self._published_date)
 
-        if self._published_date != None:
-            print(self._published_date)
+        # if self._published_date != None:
+            # print(self._published_date)
 
 
     def __str__(self):
-        pass 
+        output = ''
+        if len(self._rates_data) > 0:
+            output += '-----------------------------\n'
+            output += f'{BANKS[self.__class__.__name__.lower()]}\n'
+            output += '-----------------------------\n'
+            for curr, rate in self._rates_data.items():
+                output += f'{curr.upper()} 1 = BDT {rate}\n'
+            if self._published_date != None:
+                output += self._published_date + '\n'
+        return output
 
     def create_html_file(self):
         pass

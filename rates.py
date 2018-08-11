@@ -11,13 +11,23 @@ from banks.ibbl import IBBL
 from helper import *
 
 def main():
-    ibbl = IBBL(url=BANK_URLS['ibbl'])
-    # ibbl.retrieve_webpage()
-    # write_webpage_as_html(data=ibbl.get_scraped_raw_data())
+    command = 'ibbl'
 
-    ibbl.set_scraped_raw_data(data=read_webpage_from_html())
+    ibbl = IBBL(url=BANK_URLS[command])
+
+    '''
+    ibbl.retrieve_webpage()
+    write_webpage_as_html(
+        filename= f'{DIRS["raw"]}/{command}.html',
+        data=ibbl.get_scraped_raw_data()
+    )'''
+
+    ibbl.set_scraped_raw_data(
+        data=read_webpage_from_html(f'{DIRS["raw"]}/{command}.html')
+    )
     ibbl.convert_data_to_bs4()
     ibbl.scrap_webpage_data()
+    print(ibbl)
 
 if __name__ == '__main__':
     verify_https_issue()

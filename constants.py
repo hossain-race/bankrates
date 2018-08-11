@@ -10,9 +10,9 @@ COMMANDS = (
     'verbose', # shows print output
 )
 
-BANK_NAMES = (
-    'ibbl', # islami bank bangladesh ltd.
-)
+BANKS = {
+    'ibbl': "Islami Bank Bangladesh Ltd.",
+}
 
 CURRENCY = (
     'USD',
@@ -28,4 +28,8 @@ CURRENCY = (
 
 BANK_URLS = {
     'ibbl': 'https://www.islamibankbd.com/curr_ex_rate.php',
+}
+
+DIRS = {
+    'raw' : 'raw/' # storing raw html scraping data
 }
