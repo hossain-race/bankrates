@@ -63,13 +63,13 @@ class Bank:
         rates_data = ''
         converted_str = self.get_converted_amount_as_str()
         if converted_str != None:
-            rates_data += f'<strong>{converted_str}</strong><br><br>'
+            rates_data += f'<strong>{converted_str}</strong><br><br>\n'
 
         if len(self._rates_data) > 0:
-            rates_data += '<table border="1">'
+            rates_data += '\t\t<table border="1">\n'
             for curr, val in self._rates_data.items():
-                rates_data += f'<tr><td>{curr.upper()} 1</td><td>BDT {val}</td></tr>'
-            rates_data += '</table>'
+                rates_data += f'\t\t\t<tr><td>{curr.upper()} 1</td><td>BDT {val}</td></tr>\n'
+            rates_data += '\t\t</table>\n'
 
         published_date = ''
         if self._published_date != None:
