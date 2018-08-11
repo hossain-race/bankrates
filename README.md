@@ -45,9 +45,12 @@ pipenv shell
 ```
 
 ## How to use
-If user types in terminal/powershell. Valid commands
+- In macOs Terminal use `python3`
+- In windows Powershell use `python`
+
+Valid commands examples:
 ```
-python3 rates.py ibbl usd=100(optional) browser(optional)
+python rates.py ibbl usd=100(optional) browser(optional)
 ```
 
 ### Example 1:
@@ -72,11 +75,11 @@ Update on: 30 Jul, 2018
  ```
 
 ### Example 2:
-- Input ``` python3 rates.py ibbl usd=100```
+- Input ``` python rates.py ibbl usd=100```
 - Output ```USD 100 = ?TAKA and a beautiful table with currency rates ```
 
 ### Example 3:
-- Input ``` python3 rates.py ibbl usd=100 browser```
+- Input ``` python rates.py ibbl usd=100 browser```
 - Output ```create and open html file in a browser with data ```
 
 ## Contribution
