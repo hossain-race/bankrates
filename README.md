@@ -16,7 +16,7 @@
 # Bank Currency Rates
 A web scraping project to apply python knowledge. It will collect Bangladeshi banks currency rates. Currently only IBBL bank currency web page data is scraping. 
 
-This project will help to anyone who want to apply Python programming knowledge in real time project.
+**This project will help to anyone who want to apply Python programming knowledge in real time project.**
 
 ### Other Python Projects
 - [Python Tutorials](https://github.com/mahmudahsan/thinkdiff)
