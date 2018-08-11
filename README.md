@@ -49,8 +49,9 @@ python3 rates.py ibbl usd=100(optional) browser(optional)
 ```
 
 ### Example 1:
-- Input ``` python3 rates.py ibbl ``` | ibbl means islamic bank bangladesh ltd
-Output 
+- Input ` python3 rates.py ibbl ` | ibbl means islamic bank bangladesh ltd
+
+**Output**
 It represents 1 Foreign Rate = Bangladeshi Taka Amount
 ```
 USD 82.75
