@@ -5,6 +5,9 @@
 # license: MIT License
 # Constants
 
+# Global Variables
+CACHE = 3 # minutes
+
 COMMANDS = (
     'browser',
     'verbose', # shows print output

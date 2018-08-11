@@ -23,9 +23,6 @@ class IBBL(Bank):
             print (e)
         else:
             self._data = html.read()
-            if len(self._data) > 0:
-                if self._verbose:
-                    print ("Retrieved successfully") 
    
     def scrap_webpage_data(self):
         currencies_tr = self._soup.find_all(['tr'])
@@ -64,16 +61,24 @@ class IBBL(Bank):
 def process(command):
     ibbl = IBBL(url=BANK_URLS[command])
 
-    '''
-    ibbl.retrieve_webpage()
-    helper.write_webpage_as_html(
-        filename= f'{DIRS["raw"]}/{command}.html',
-        data=ibbl.get_scraped_raw_data()
-    )'''
-
-    ibbl.set_scraped_raw_data(
-        data=helper.read_webpage_from_html(f'{DIRS["raw"]}/{command}.html')
+    # getting last scarping time info
+    scraping_time = helper.get_last_scraped_time(
+        filename=helper.raw_data_filename(DIRS, command)
     )
+
+    # check caching duration and if required rescrap data
+    if scraping_time > CACHE:
+        ibbl.retrieve_webpage()
+        helper.write_webpage_as_html(
+            filename= helper.raw_data_filename(DIRS, command),
+            data=ibbl.get_scraped_raw_data()
+        )
+    else:
+        # if data already in read from local file
+        ibbl.set_scraped_raw_data(
+            data=helper.read_webpage_from_html(helper.raw_data_filename(DIRS, command))
+        )
+    
     ibbl.convert_data_to_bs4()
     ibbl.scrap_webpage_data()
     print(ibbl)

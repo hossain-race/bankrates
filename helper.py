@@ -5,6 +5,9 @@
 # license: MIT License
 # Helper Functions
 
+import os
+from datetime import datetime
+
 # https verify issue solution
 # https://bit.ly/2KKXIQD
 def verify_https_issue():
@@ -36,3 +39,18 @@ def read_webpage_from_html(filename='html/temp.html'):
         return False
     else:
         return data
+
+def raw_data_filename(DIRS, command):
+    return f'{DIRS["raw"]}{command}.html'
+
+# Getting time difference in minutes when file last modified
+def get_last_scraped_time(filename):
+    if not os.path.exists(filename):
+        return -1 # file doesn't exist
+
+    file_time = os.path.getmtime(filename)
+    now = datetime.timestamp(datetime.now())
+    diff = now - file_time
+    #print(file_time, now, diff)
+    minutes = int(round(diff / 60))
+    return minutes
