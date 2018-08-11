@@ -102,7 +102,7 @@ Update on: 30 Jul, 2018
 ```
 
 ### Example 3:
-- Input ``` python rates.py ibbl usd=100 browser```
+- Input ``` python rates.py ibbl usd=123 browser```
 
 **Output**
 <p>
