@@ -1,6 +1,6 @@
 <p align="center">
     <a href="/">
-        <img src="https://img.shields.io/badge/build-failed-brightgreen.svg" alt="Build" />
+        <img src="https://img.shields.io/badge/build-passed-brightgreen.svg" alt="Build" />
     </a>
     <a href="https://www.python.org/">
         <img src="https://img.shields.io/badge/python-3.7-yellow.svg" alt="Python" />
