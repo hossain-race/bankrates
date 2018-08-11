@@ -19,15 +19,20 @@ A web scraping project to apply python knowledge. It will collect Bangladeshi ba
 This project will help to anyone who want to apply Python programming knowledge in real time project.
 
 ## Prerequisite 
-To understand the code minimum python knowledge required:
+To understand the code minimum python knowledge required are written below. 
 
-- Fundamental of Python 3 
-- Object oriented programming
-- Exception Handling
-- Files I/O
-- pipenv packaging
-- Modules and Package
+- Fundamental of Python 3 | [বাংলা]()
+- Object oriented programming | [বাংলা]()
+- Exception Handling | [বাংলা]()
+- Files I/O | [বাংলা]()
+- pipenv packaging | [বাংলা]()
+- Modules and Package | [বাংলা]()
+- Unit Test | [বাংলা]()
+- Regular Expression | [বাংলা]()
 
+[My English Python Tutorial Course]()
+
+All of these programming concepts are discussed in my Bangla youtube channel named [Mahmud Ahsan](https://www.youtube.com/channel/UCtHlgyUw0wLE5Ous9swfFlg/playlists) or [PythonBangla.com](http://pythonbangla.com)
 
 ## Installation
 [pipenv Bangla Video Tutorial](https://www.youtube.com/watch?v=imuxt5iHy_A)
@@ -44,8 +49,21 @@ python3 rates.py ibbl usd=100(optional) browser(optional)
 ```
 
 ### Example 1:
-- Input ``` python3 rates.py ibbl ```
-- Output ```A beautiful table with currency rates ```
+- Input ``` python3 rates.py ibbl ``` | ibbl means islamic bank bangladesh ltd
+Output 
+It represents 1 Foreign Rate = Bangladeshi Taka Amount
+```
+USD 82.75
+GBP 106.9792
+EUR 95.1625
+JPY 0.7345
+CHF 81.9307
+SGD 60.1599
+AED 22.465
+SAR 22.0285
+CAD 62.8083
+Update on: 30 Jul, 2018
+ ```
 
 ### Example 2:
 - Input ``` python3 rates.py ibbl usd=100```
