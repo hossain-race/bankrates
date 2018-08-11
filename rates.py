@@ -6,29 +6,27 @@
 
 # Main Program
 
+import sys
 from constants import *
-from banks.ibbl import IBBL
-from helper import *
+from banks import ibbl
+import helper
 
 def main():
-    command = 'ibbl'
+    num_commands = len(sys.argv)
+    bank = None
 
-    ibbl = IBBL(url=BANK_URLS[command])
+    if num_commands >= 2:
+        bank = sys.argv[1].lower()
+        bank = bank if bank in BANKS else None
 
-    '''
-    ibbl.retrieve_webpage()
-    write_webpage_as_html(
-        filename= f'{DIRS["raw"]}/{command}.html',
-        data=ibbl.get_scraped_raw_data()
-    )'''
+    if bank != None:
+        call_process_bank(bank)
+    else:
+        print("Invalid Commands")
 
-    ibbl.set_scraped_raw_data(
-        data=read_webpage_from_html(f'{DIRS["raw"]}/{command}.html')
-    )
-    ibbl.convert_data_to_bs4()
-    ibbl.scrap_webpage_data()
-    print(ibbl)
+def call_process_bank(name):
+    if name == 'ibbl': ibbl.process('ibbl')   
 
 if __name__ == '__main__':
-    verify_https_issue()
+    helper.verify_https_issue()
     main()

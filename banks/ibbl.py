@@ -6,18 +6,15 @@
 # IBBL
 
 from urllib.request import urlopen 
-from bs4 import BeautifulSoup
-from constants import BANKS
-import re
+import re 
 
-class IBBL:
-    def __init__(self, url, verbose=False):
-        self._url = url
-        self._verbose = verbose
-        self._data = ''
-        self._rates_data = {}   
-        self._published_date = None
+import helper
+from .bank import Bank
+from constants import *
 
+class IBBL(Bank):
+    def __init__(self, url):
+        super().__init__(url)
 
     def retrieve_webpage(self):
         try:
@@ -29,15 +26,6 @@ class IBBL:
             if len(self._data) > 0:
                 if self._verbose:
                     print ("Retrieved successfully") 
-
-    def get_scraped_raw_data(self):
-        return self._data
-    
-    def set_scraped_raw_data(self, data):
-        self._data = data
-
-    def convert_data_to_bs4(self):
-        self._soup = BeautifulSoup(self._data, "html.parser")
    
     def scrap_webpage_data(self):
         currencies_tr = self._soup.find_all(['tr'])
@@ -60,13 +48,10 @@ class IBBL:
         # if self._published_date != None:
             # print(self._published_date)
 
-
     def __str__(self):
-        output = ''
+        output = super().__str__()
+
         if len(self._rates_data) > 0:
-            output += '-----------------------------\n'
-            output += f'{BANKS[self.__class__.__name__.lower()]}\n'
-            output += '-----------------------------\n'
             for curr, rate in self._rates_data.items():
                 output += f'{curr.upper()} 1 = BDT {rate}\n'
             if self._published_date != None:
@@ -76,5 +61,19 @@ class IBBL:
     def create_html_file(self):
         pass
 
-    def debug(self):
-        print(self._data)
+def process(command):
+    ibbl = IBBL(url=BANK_URLS[command])
+
+    '''
+    ibbl.retrieve_webpage()
+    helper.write_webpage_as_html(
+        filename= f'{DIRS["raw"]}/{command}.html',
+        data=ibbl.get_scraped_raw_data()
+    )'''
+
+    ibbl.set_scraped_raw_data(
+        data=helper.read_webpage_from_html(f'{DIRS["raw"]}/{command}.html')
+    )
+    ibbl.convert_data_to_bs4()
+    ibbl.scrap_webpage_data()
+    print(ibbl)
