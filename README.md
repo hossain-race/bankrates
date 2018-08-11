@@ -13,7 +13,7 @@
     </a>
 </p>
 
-# bankrates
+# Bank Currency Rates
 A web scraping project to apply python knowledge. It will collect Bangladeshi banks currency rates. Currently only IBBL bank currency web page data is scraping. 
 
 This project will help to anyone who want to apply Python programming knowledge in real time project.
@@ -32,7 +32,7 @@ To understand the code minimum python knowledge required are written below.
 
 ## Learning Resources 
 1. **[ENGLISH PYTHON COURSE](https://bit.ly/2v7lT74)**
-2. **[বাংলা ওয়েবপেজ স্ক‍্র‍্যাপিং সিরিজ](https://www.youtube.com/watch?v=3YLyT4LRJUc&list=PLlMOodDAsO4zLUcrCyUJ8aclYqOOcSMfn)**
+2. **[বাংলা ওয়েবপেজ স্ক‍্র‍্যাপিং সিরিজ](https://www.youtube.com/watch?v=3YLyT4LRJUc&list=PLlMOodDAsO4zLUcrCyUJ8aclYqOOcSMfn)**
 3. **[বাংলা ইউটিউব চ‍্যানেল](https://www.youtube.com/channel/UCtHlgyUw0wLE5Ous9swfFlg/playlists)**
 4. **[PythonBangla.com](http://pythonbangla.com)**
 
