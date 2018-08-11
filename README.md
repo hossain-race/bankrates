@@ -21,16 +21,18 @@ This project will help to anyone who want to apply Python programming knowledge 
 ## Prerequisite 
 To understand the code minimum python knowledge required are written below. 
 
-- Fundamental of Python 3 | [বাংলা]()
-- Object oriented programming | [বাংলা]()
-- Exception Handling | [বাংলা]()
-- Files I/O | [বাংলা]()
-- pipenv packaging | [বাংলা]()
-- Modules and Package | [বাংলা]()
-- Unit Test | [বাংলা]()
-- Regular Expression | [বাংলা]()
+- Fundamental of Python 3 | [বাংলা](https://www.youtube.com/watch?v=qcRlYt28WPM&list=PLlMOodDAsO4y8_pYiKnweAz0MjR61VByU)
+- Object oriented programming | [বাংলা](https://www.youtube.com/watch?v=xA43kBnuglE&list=PLlMOodDAsO4xV_Fr-j25BmwuD2V5B18ra)
+- Exception Handling | [বাংলা](https://www.youtube.com/watch?v=sUWaEBe7UfU)
+- Files I/O | [বাংলা](https://www.youtube.com/watch?v=k1rFag1W2WM)
+- pipenv packaging | [বাংলা](https://www.youtube.com/watch?v=imuxt5iHy_A)
+- Modules and Package | [বাংলা](https://www.youtube.com/watch?v=cdBiyCxmeRg)
+- Unit Test | [বাংলা](https://www.youtube.com/watch?v=UhIwkjwz6Ek)
+- Regular Expression | [বাংলা](https://www.youtube.com/watch?v=yygyryPAJH0)
 
-[My English Python Tutorial Course]()
+**[English Python Tutorial Course](https://bit.ly/2v7lT74)**
+
+**[বাংলা ওয়েবপেজ স্ক‍্র‍্যাপিং সিরিজ](https://www.youtube.com/watch?v=3YLyT4LRJUc&list=PLlMOodDAsO4zLUcrCyUJ8aclYqOOcSMfn)
 
 All of these programming concepts are discussed in my Bangla youtube channel named [Mahmud Ahsan](https://www.youtube.com/channel/UCtHlgyUw0wLE5Ous9swfFlg/playlists) or [PythonBangla.com](http://pythonbangla.com)
 
