@@ -45,8 +45,8 @@ pipenv shell
 ```
 
 ## How to use
-- In ***macOs terminal*** use `python3`
-- In ***windows powershell*** use `python`
+- In **macOs terminal** use `python3`
+- In **windows powershell** use `python`
 
 Valid commands examples:
 ```
