@@ -18,6 +18,10 @@ A web scraping project to apply python knowledge. It will collect Bangladeshi ba
 
 This project will help to anyone who want to apply Python programming knowledge in real time project.
 
+### Other Python Projects
+- [Python Tutorials](https://github.com/mahmudahsan/thinkdiff)
+- [Pythonbangla.com Webapp](https://github.com/mahmudahsan/pythonbangla.com)
+
 ## Prerequisite 
 To understand the code minimum python knowledge required are written below. 
 
