@@ -106,7 +106,7 @@ Update on: 30 Jul, 2018
 
 **Output**
 <p>
-  <img src="image/ibbl.png" alt="ibbl" />  
+  <img src="image/ibbl.png" alt="ibbl" width='50%' />  
  </p>
 
 ## Contribution
