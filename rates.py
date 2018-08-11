@@ -16,6 +16,7 @@ def main():
     bank = None
     curr = None 
     amount = None 
+    browser = None
 
     if num_commands >= 2:
         bank = sys.argv[1].lower()
@@ -27,13 +28,19 @@ def main():
         curr = curr_amount[0]
         amount = float(curr_amount[1])
 
+    if num_commands >= 4:
+        # browser
+        cmd = sys.argv[3].lower()
+        if cmd in COMMANDS: browser = True
+
     if bank != None:
-        call_process_bank(bank, curr, amount)
+        call_process_bank(bank, curr, amount, browser)
     else:
         print("Invalid Commands")
 
-def call_process_bank(name, curr=None, amount=None):
-    if name == 'ibbl': ibbl.process('ibbl', curr=curr, amount=amount)   
+def call_process_bank(name, curr=None, amount=None, browser=None):
+    if name == 'ibbl': 
+        ibbl.process('ibbl', curr=curr, amount=amount, browser=browser)   
 
 if __name__ == '__main__':
     helper.verify_https_issue()

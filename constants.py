@@ -11,7 +11,6 @@ LOCAL_CURRENCY = 'BDT'
 
 COMMANDS = (
     'browser',
-    'verbose', # shows print output
 )
 
 BANKS = {

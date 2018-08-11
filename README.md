@@ -103,7 +103,11 @@ Update on: 30 Jul, 2018
 
 ### Example 3:
 - Input ``` python rates.py ibbl usd=100 browser```
-- Output ```create and open html file in a browser with data ```
+
+**Output**
+<p>
+  <img src="image/ibbl.png" alt="ibbl" />  
+ </p>
 
 ## Contribution
 If you want to contribute on this project, you're welcome to fork the project and submit a pull request. 

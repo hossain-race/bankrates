@@ -7,6 +7,9 @@
 
 from urllib.request import urlopen 
 import re 
+import webbrowser
+import os
+import pathlib
 
 import helper
 from .bank import Bank
@@ -62,6 +65,7 @@ def process(command, **kwargs):
     ibbl = IBBL(url=BANK_URLS[command])
     curr = kwargs['curr']
     amount = kwargs['amount']
+    browser = kwargs['browser']
 
     # getting last scarping time info
     scraping_time = helper.get_last_scraped_time(
@@ -85,6 +89,16 @@ def process(command, **kwargs):
     ibbl.scrap_webpage_data()
     ibbl.convert_amount_to_local_currency(curr, amount)
 
-
     # Output
-    print(ibbl)
+    if browser:
+        html_data = ibbl.get_output_as_html()
+        filepath = helper.raw_data_filename(DIRS, f'{command}_output')
+        helper.write_webpage_as_html(filepath, str.encode(html_data))
+        
+        # open browser
+        abs_filepath = os.path.abspath(filepath)
+        fileurl = pathlib.Path(abs_filepath).as_uri()
+        print(fileurl)
+        webbrowser.open(fileurl)
+    else:
+        print(ibbl)
