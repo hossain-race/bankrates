@@ -37,7 +37,8 @@ To understand the code minimum python knowledge required are written below.
 4. **[PythonBangla.com](http://pythonbangla.com)**
 
 ## Installation
-[pipenv Bangla Video Tutorial](https://www.youtube.com/watch?v=imuxt5iHy_A)
+- [pipenv বাংলা](https://www.youtube.com/watch?v=imuxt5iHy_A)
+- [pipenv English](http://thinkdiff.net/python/python-official-pipenv-packaging-tool-for-virtualenv-and-pip-in-mac-and-windows/)
 
 ```
 pipenv install bs4
