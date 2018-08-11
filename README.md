@@ -30,11 +30,10 @@ To understand the code minimum python knowledge required are written below.
 - Unit Test | [বাংলা](https://www.youtube.com/watch?v=UhIwkjwz6Ek)
 - Regular Expression | [বাংলা](https://www.youtube.com/watch?v=yygyryPAJH0)
 
-**[English Python Tutorial Course](https://bit.ly/2v7lT74)**
-
-**[বাংলা ওয়েবপেজ স্ক‍্র‍্যাপিং সিরিজ](https://www.youtube.com/watch?v=3YLyT4LRJUc&list=PLlMOodDAsO4zLUcrCyUJ8aclYqOOcSMfn)
-
-All of these programming concepts are discussed in my Bangla youtube channel named [Mahmud Ahsan](https://www.youtube.com/channel/UCtHlgyUw0wLE5Ous9swfFlg/playlists) or [PythonBangla.com](http://pythonbangla.com)
+1. **[ENGLISH PYTHON COURSE](https://bit.ly/2v7lT74)**
+2. **[বাংলা ওয়েবপেজ স্ক‍্র‍্যাপিং সিরিজ](https://www.youtube.com/watch?v=3YLyT4LRJUc&list=PLlMOodDAsO4zLUcrCyUJ8aclYqOOcSMfn)**
+3. **[বাংলা ইউটিউব চ‍্যানেল](https://www.youtube.com/channel/UCtHlgyUw0wLE5Ous9swfFlg/playlists)**
+4. **[PythonBangla.com](http://pythonbangla.com)**
 
 ## Installation
 [pipenv Bangla Video Tutorial](https://www.youtube.com/watch?v=imuxt5iHy_A)
