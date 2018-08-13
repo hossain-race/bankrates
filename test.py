@@ -5,7 +5,7 @@
 # license: MIT License
 # unit testing
 
-import unittest 
+import unittest
 
 from constants import *
 from banks.ibbl import IBBL
@@ -21,13 +21,9 @@ class IBBLTestCase(unittest.TestCase):
         self.assertTrue(len(self._ibbl._data) > 0)
 
     def test_scrap_webpage_data(self):
-        self.assertEqual(1, 0)  
-
-    def test_str(self):
-        self.assertEqual(1, 0)  
-
-    def test_create_html_file(self):
-        self.assertEqual(1, 0)  
+        self._ibbl.scrap_webpage_data()
+        self.assertTrue(len(self._ibbl._rates_data) >= 9)
+ 
 
 if __name__ == '__main__':
     unittest.main()

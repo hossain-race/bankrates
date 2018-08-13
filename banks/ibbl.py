@@ -28,6 +28,7 @@ class IBBL(Bank):
             self._data = html.read()
    
     def scrap_webpage_data(self):
+        super().convert_data_to_bs4()
         currencies_tr = self._soup.find_all(['tr'])
              
         for tr in currencies_tr:
@@ -61,20 +62,15 @@ class IBBL(Bank):
     def create_html_file(self):
         pass
 
-def process(command, **kwargs):
-    ibbl = IBBL(url=BANK_URLS[command])
-    curr = kwargs['curr']
-    amount = kwargs['amount']
-    browser = kwargs['browser']
-
+def check_cache(ibbl, command):
     # getting last scarping time info
     scraping_time = helper.get_last_scraped_time(
         filename=helper.raw_data_filename(DIRS, command)
     )
 
-    # check caching duration and if required rescrap data
+    # check caching duration and if required redownload data
     if scraping_time > CACHE:
-        ibbl.retrieve_webpage()
+        ibbl.retrieve_webpage() # retrieving data from site
         helper.write_webpage_as_html(
             filename= helper.raw_data_filename(DIRS, command),
             data=ibbl.get_scraped_raw_data()
@@ -84,12 +80,8 @@ def process(command, **kwargs):
         ibbl.set_scraped_raw_data(
             data=helper.read_webpage_from_html(helper.raw_data_filename(DIRS, command))
         )
-    
-    ibbl.convert_data_to_bs4()
-    ibbl.scrap_webpage_data()
-    ibbl.convert_amount_to_local_currency(curr, amount)
 
-    # Output
+def show_output(ibbl, browser):
     if browser:
         html_data = ibbl.get_output_as_html()
         filepath = helper.raw_data_filename(DIRS, f'{command}_output')
@@ -102,3 +94,21 @@ def process(command, **kwargs):
         webbrowser.open(fileurl)
     else:
         print(ibbl)
+
+# main entry point to process ibbl class
+def process(command, **kwargs):
+    ibbl = IBBL(url=BANK_URLS[command])
+    curr = kwargs['curr']
+    amount = kwargs['amount']
+    browser = kwargs['browser']
+
+    # based on cache time, retrieve local or site data
+    check_cache(ibbl, command)
+
+    # process and convert scraping data
+    ibbl.scrap_webpage_data()
+    ibbl.convert_amount_to_local_currency(curr, amount)
+
+    # Output
+    show_output(ibbl, browser)
+    
