@@ -109,6 +109,11 @@ Update on: 30 Jul, 2018
   <img src="image/ibbl.png" alt="ibbl" width='50%' />  
  </p>
 
+## Important Files
+`rates.py` is the main file or entry point to run the program
+
+`test.py` contains the unit test codes
+
 ## Contribution
 If you want to contribute on this project, you're welcome to fork the project and submit a pull request. 
 
