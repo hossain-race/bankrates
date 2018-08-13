@@ -114,6 +114,8 @@ Update on: 30 Jul, 2018
 
 `test.py` contains the unit test codes
 
+`banks\bank.py` is the parent class which should be inherited by any class that represents a particular bank. for example: `ibbl`
+
 ## Contribution
 If you want to contribute on this project, you're welcome to fork the project and submit a pull request. 
 
