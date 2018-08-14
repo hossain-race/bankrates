@@ -1,5 +1,5 @@
 # author: Mahmud Ahsan
-# github: https://github.com/mahmudahsan
+# https://github.com/mahmudahsan/bankrates
 # blog: http://thinkdiff.net
 # web: http://pythonbangla.com
 # license: MIT License
