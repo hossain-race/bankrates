@@ -81,7 +81,7 @@ def check_cache(ibbl, command):
             data=helper.read_webpage_from_html(helper.raw_data_filename(DIRS, command))
         )
 
-def show_output(ibbl, browser):
+def show_output(ibbl, browser, command):
     if browser:
         html_data = ibbl.get_output_as_html()
         filepath = helper.raw_data_filename(DIRS, f'{command}_output')
@@ -110,5 +110,5 @@ def process(command, **kwargs):
     ibbl.convert_amount_to_local_currency(curr, amount)
 
     # Output
-    show_output(ibbl, browser)
+    show_output(ibbl, browser, command)
     

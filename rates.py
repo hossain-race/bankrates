@@ -18,20 +18,20 @@ def main():
     amount = None 
     browser = None
 
-    if num_commands >= 2:
-        bank = sys.argv[1].lower()
-        bank = bank if bank in BANKS else None
-
-    if num_commands >= 3:
-        # for example usd=100
-        curr_amount = sys.argv[2].lower().split("=")
-        curr = curr_amount[0]
-        amount = float(curr_amount[1])
-
-    if num_commands >= 4:
-        # browser
-        cmd = sys.argv[3].lower()
-        if cmd in COMMANDS: browser = True
+    for i, command in enumerate(sys.argv):
+        command = command.lower()
+        if i == 0: pass # no need fast name
+        elif i == 1: 
+            # 2nd parameter should be bank name
+            bank = command.lower()
+            bank = bank if bank in BANKS else None
+        else:
+            # 3rd and 4th paramet process here
+            if command in COMMANDS: browser = True
+            elif '=' in command:
+                curr_amount = command.split("=")
+                curr = curr_amount[0]
+                amount = float(curr_amount[1])
 
     if bank != None:
         call_process_bank(bank, curr, amount, browser)
