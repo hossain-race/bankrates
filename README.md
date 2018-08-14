@@ -50,6 +50,8 @@ pipenv shell
 ```
 
 ## How to use
+This program is tested in both mac and windows.
+
 - In **macOs terminal** use `python3`
 - In **windows powershell** use `python`
 
